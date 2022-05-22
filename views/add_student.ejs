@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/static/style.css">
+
+  <title>Add Student</title>
+</head>
+
+<body>
+  <!-- <div class="signup">
+    <div class="form"> -->
+  <form action="/add_student" enctype="multipart/form-data" method="POST">
+    <div>
+      <label>MISIS</label>
+      <input type="number" placeholder="Enter your id" name="MISIS" required> -->
+
+    </div>
+    <div>
+      <label for="fname">First Name</label>
+      <input type="text" id="student_firstName" name="student_firstName" required>
+    </div>
+    <div>
+      <label for="lname">Last Name</label>
+      <input type="text" id="student_lastName" name="student_lastName" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="reg_email" name="student_email" required>
+    </div>
+    <!-- <div>
+      <label for="image">Upload image</label>
+      <input type="file" name="image" multiple>
+     <input type="submit" id="image" name="image" >
+    </div> -->
+    <button type="submit" value="signup">ADD STUDENT</button>
+    <!-- <p class="optionb">Existing Member?<a href="#">Login</a></p> -->
+
+
+  </form>
+
+
+
+
+
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+  </script>
+
+  <script src='../public/javascript/image-model.js'>
+  </script>
+
+</body>
+
+</html>

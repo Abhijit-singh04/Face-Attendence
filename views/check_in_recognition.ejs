@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Check-In <%= selectGroup %></title>
+  <script defer src="/public/javascript/face-api.min.js"></script>
+  <script defer src="/public/javascript/script.js"></script> 
+  <link rel="stylesheet" href="/static/faceStyle.css">
+
+
+
+</head>
+<body>
+
+  <video name="video" id="video" width="720" height="560" autoplay muted></video>
+<br>
+    <p  id="groupName"><%= selectGroup %></p>
+    <br>
+    <a href="/session"><button>Stop Session</button></a>
+  
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <title>Sessions</title>
+</head>
+<body>
+        <div class="topnav">
+                <a href="/">Home</a>
+                <a  href="viewStudents">Student Details</a>
+                <a class="active" href="session">Sessions</a>
+                <a href="googleLogin">Calender</a>
+                <a href="attendance">View Attendance</a>
+                <a href="logout">Logout</a>
+        </div>
+            <div class="signup">
+                    <div class="form">
+        <form method="POST">
+            <!-- <label for="check_in">Check In</label>
+            <input type="text" id="check_in" name="check_in" required>
+
+            <label for="check_out">Check Out</label>
+            <input type="text" id="check_out" name="check_out" required> -->
+            <!-- <div>
+                <select name="selectType" id="selectType">
+                    <option value="01:00:00">Lecture</option>
+                    <option value="02:00:00">Lab</option>  
+                </select>
+            </div> -->
+            <script>
+            $(document).ready(function(){
+            $('#selectGroup').change(function(){ 
+
+                var selectGroup = $('#selectGroup').val();
+
+                $.ajax({
+                    type:'GET',
+                    data: { selectGroup: selectGroup },
+                    url:'/getTime',
+                    success: function(data){
+                        console.log(data);
+                        $('#startTime').empty();
+                        $('#endTime').empty();
+                        $.each(data, function (index, TimeValue) {
+                            $('#startTime').val(TimeValue.event_startTime );
+                            $('#endTime').val(TimeValue.event_endTime );
+
+                        });
+                    }
+                });
+            });
+        })
+            </script>
+
+            <div>
+                    <label for="group">Group </label> <br>
+  
+                    <select name="selectGroup" id="selectGroup">
+                        <option>
+                            Select Group
+                        </option>
+                        <% for (var i = 0; i < listResults.length; i++){ %>
+                            <option>
+                              <%= listResults[i].event_name %>
+                            </option>   
+                        <% } %>
+
+
+                    
+                    </select>
+                    <br>
+                </div>
+                <br>
+
+
+
+
+                <div>
+                    <label for="startTime">Start Time</label>
+                    <input type="text" value = "" id="startTime" name="startTime" readonly required>
+                </div>
+                <div>
+                    <label for="endTime">End Time</label>
+                    <input type="text" value = "" id="endTime" name="endTime" readonly required>
+                </div>
+
+
+
+
+                
+            <button type="submit" formaction="/check_in_recognition" >Start Session</button>
+            <button type="submit" formaction="/check_out_recognition">Stop Session</button>
+
+            <!-- <button onclick="sendGroup()" type="submit">Start Class</button> -->
+        </form>
+        </div>
+        </div>
+    </body>
+</html>

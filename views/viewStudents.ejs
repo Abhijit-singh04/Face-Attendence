@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <link href= "/static/style.css" rel= "stylesheet" type="text/css"/>
+
+    <title>Students</title>
+</head>
+<body>
+        <div class="topnav">
+                <a href="/">Home</a>
+                <a class="active" href="viewStudents">Student Details</a>
+                <a href="session">Sessions</a>
+                <a href="googleLogin">Calender</a>
+                <a href="attendance">View Attendance</a>
+                <a href="logout">Logout</a>
+        </div>
+
+        <div class="signup">
+                <div class="form">
+    <form method="POST">
+        <!-- <label for="check_in">Check In</label>
+        <input type="text" id="check_in" name="check_in" required>
+
+        <label for="check_out">Check Out</label>
+        <input type="text" id="check_out" name="check_out" required> -->
+        <!-- <div>
+            <select name="selectType" id="selectType">
+                <option value="01:00:00">Lecture</option>
+                <option value="02:00:00">Lab</option>  
+            </select>
+        </div> -->
+        <script>
+        $(document).ready(function(){
+        $('#selectGroup').change(function(){ 
+
+            var selectGroup = $('#selectGroup').val();
+
+            $.ajax({
+                type:'GET',
+                data: { selectGroup: selectGroup },
+                url:'/getStudents',
+                success: function(data){
+                    $('#stdTable').empty();
+                    $('#stdTable').append('<tr><td>MISIS</td><td>First Name</td><td>Last Name</td><td>Email</td></tr>')
+                    for (i=0 ; i < data.length ; i++){
+                    var row = data[i];
+                    $('#stdTable').append('<tr><td>'+row.MISIS+'</td><td>'+row.student_firstName+'</td><td>'+row.student_lastName+'</td><td>'+row.student_email+'</td></tr>')
+                    }
+                }
+            });
+        });
+    })
+
+        </script>
+
+        <div>
+                <label for="group">Group </label> <br>
+
+                <select name="selectGroup" id="selectGroup">
+                    <option>
+                        Select Group
+                    </option>
+                    <% for (var i = 0; i < listResults.length; i++){ %>
+                        <option>
+                          <%= listResults[i].module_name %>
+                        </option>   
+                    <% } %>
+
+
+                
+                </select>
+                <br>
+            </div>
+
+            <table id="stdTable">
+            </table>
+    
+</body>
+</html>

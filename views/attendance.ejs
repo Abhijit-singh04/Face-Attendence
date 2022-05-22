@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <title>Attendance</title>
+</head>
+
+<body>
+    <div class="form">
+        <div class="signup">
+            <script>
+                $(document).ready(function () {
+                    $('#studentTable').empty();
+
+                    $('#getInfoBtn').click(function () {
+
+                        var selectGroup = $('#selectGroup').val();
+                        var class_date = $('#class_date').val()
+                        console.log("class date ")
+                        console.log(class_date)
+
+                        $.ajax({
+                            type: 'GET',
+                            data: {
+                                selectGroup: selectGroup,
+                                class_date: class_date
+                            },
+                            url: '/getData',
+                            success: function (data) {
+                                console.log(data);
+                                // $('#studentID').empty();
+                                // $('#studentName').empty();
+                                $('studentTable').append(
+                                    " <tr><th> MISIS </th><th>Name</th><th>Status</th></tr>"
+                                );
+                                $.each(data, function (index, studentInfo) {
+                                    $('#studentTable').append("<tr> <td>" +
+                                        studentInfo.MISIS + "</td> <td>" +
+                                        studentInfo.student_firstName +
+                                        "</td> <td>" + studentInfo.status +
+                                        "</td> </tr>");
+                                });
+
+
+                            }
+                        });
+                    });
+                })
+            </script>
+            <form action="/getData" method="GET">
+                <div>
+                    <label for="group">Group </label>
+
+                    <select name="selectGroup" id="selectGroup">
+                        <option>
+                            Select Group
+                        </option>
+                        <% for (var i=0; i < listResults.length; i++){ %>
+                        <option>
+                            <%= listResults[i].event_name %>
+                        </option>
+                        <% } %>
+
+
+
+                    </select>
+                </div>
+                <br>
+                <input type="date" id="class_date" name="class_date">
+                <button id="getInfoBtn" type="submit">Get Data</button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <table border="1" id="studentTable">
+        <tr>
+            <th>
+                Student ID
+            </th>
+            <th>
+                Name
+            </th>
+
+            <th>
+                Status
+            </th>
+        </tr>
+        <tr>
+            <td id="studentID">
+
+            </td>
+            <td id="studentName">
+
+            </td>
+
+            <td id="status">
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

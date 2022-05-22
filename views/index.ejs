@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/static/style.css" rel="stylesheet" type="text/css" />
+    <title>Home</title>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="viewStudents">Student Details</a></a>
+        <a href="add_lecturer">Add Lecturer</a>
+        <a href="session">Sessions</a>
+        <a href="googleLogin">Calender</a>
+        <a href="attendance">View Attendance</a>
+        <a href="logout">Logout</a>
+    </div>
+    <div id="leftHalf">
+    </div>
+    <div id="rightHalf">
+        <h2 class=displayText>
+            Making Attendance Easier
+        </h2>
+    </div>
+    <form  class="form">
+
+        <div>
+           
+            <button type="submit" formaction="/add_student">Add a new Student</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/add_lecturer">Add a new Lecturer</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/session">Start Session</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/recognition">recognition</button>
+        </div>
+        <div>
+            <button type="submit" formaction="/googleLogin">Google Login</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
