@@ -141,7 +141,7 @@ top: 422px;
 .login-as{
   /* background-color: green; */
   position: absolute;
-width: 66px;
+width: 67px;
 height: 24px;
 left: 0;
 top: 0;
@@ -226,7 +226,7 @@ background: url('./img/Ellipse\ 3.png');
 }
 .login-as-name{
   /* position: absolute; */
-  width: 81px;
+  width: 82px;
   height: 23px;
   display: flex;
   justify-content: center;
