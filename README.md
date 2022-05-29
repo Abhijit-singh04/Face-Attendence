@@ -21,5 +21,5 @@ Face-Attendence is a face acknowledgment participation framework that utilizatio
 5 . create a new  table named "faceid"<br>
 6 . click on SQL in phpmyadmin <br>
 7 . copy code from faceid.sql and paste in SQL tab ,present is phpmyadmin<br>
-8 .  run "npm i" <br>
-9 . go to terminal and run " npm run dev "<br>
+8 . go to terminal run "npm i" <br>
+9 . then ,"npm run dev"
