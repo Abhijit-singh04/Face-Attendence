@@ -8,7 +8,7 @@
     "dev": "nodemon server.js"
   },
   "author": "toni",
-  "license": "ISC"
+  "license": "ISC",
 
  "dependencies": {
     "ajax": "^0.0.4",
