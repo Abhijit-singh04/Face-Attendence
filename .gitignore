@@ -10,3 +10,5 @@ sequelize-cli.cmd
 sequelize-cli.ps1
 sequelize.cmd
 sequelize.ps1
+
+/node_modules
