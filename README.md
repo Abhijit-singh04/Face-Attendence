@@ -15,13 +15,11 @@ Face-Attendence is a face acknowledgment participation framework that utilizatio
 
 # Instruction
 1 . git clone https://github.com/Abhijit-singh04/Face-Attendence <br>
-2 . cd ./Face-Attendence 
-3 . run "npm i" 
-4 . connect to mysql using XAMPP <br>
-5 . open phpmyadmin and put your credential in db/connect.js<br>
-6 . create a new  table named "faceid"<br>
-7 . click on SQL in phpmyadmin <br>
-8 . copy code from faceid.sql and paste in SQL tab ,present is phpmyadmin<br>
+2 . cd ./Face-Attendence <br>
+3 . connect to mysql using XAMPP <br>
+4 . open phpmyadmin and put your credential in db/connect.js<br>
+5 . create a new  table named "faceid"<br>
+6 . click on SQL in phpmyadmin <br>
+7 . copy code from faceid.sql and paste in SQL tab ,present is phpmyadmin<br>
+8 .  run "npm i" <br>
 9 . go to terminal and run " npm run dev "<br>
-
-
