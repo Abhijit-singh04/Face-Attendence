@@ -10,3 +10,27 @@
   "author": "toni",
   "license": "ISC"
 }
+ "dependencies": {
+    "ajax": "^0.0.4",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cookie-session": "^2.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.1",
+    "google-auth-library": "^8.0.2",
+    "googleapis": "^100.0.0",
+    "heroku": "^7.60.2",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.3",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.20.1",
+    "sequelize-cli": "^6.4.1"
+  }
