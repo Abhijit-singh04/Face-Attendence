@@ -1,0 +1,335 @@
+/* #0089ED */
+
+
+*,
+::after,
+::before {
+    margin: 0 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+	height: 100vh;
+	width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.container {
+    margin: 0px;
+    /* margin-bottom: 0px; */
+    padding: 0;
+    /* width: 100%; */
+    box-sizing: border-box;
+    background-color: #0089ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    
+}
+
+.small-container {
+    position: absolute;
+    width: 957px;
+    height: 514px;
+    /* left: 373px; */
+    top: 66px;
+    background: #FFE1E3;
+    border-radius: 30px;
+}
+.small-container img{
+    position: absolute;
+    width: 298px;
+    height: 462px;
+    left: 56px;
+    top: 33px;
+}
+/* ================================================================== */
+.yellow-ellipse {
+    position: absolute;
+    width: 141px;
+    height: 141px;
+    left: 147px;
+    top: 215px;
+    background: #FFD749;
+    border-radius: 50%;
+}
+
+.white-circle1 {
+    position: absolute;
+    width: 173px;
+    height: 273px;
+    left: 360px;
+    top: 743px;
+
+    background: #FFFFFF;
+}
+.small-container img {
+    /* background-color: yellow; */
+    /* background-color: yellow;  */
+    position: absolute;
+    width: 298px;
+    height: 395px;
+    left: 56px;
+    top: 66px;
+
+    /* background: url(abc.png); */
+}
+.lets-talk-container{
+    /* background-color: violet; */
+    position: absolute;
+    width: 752.86px;
+    height: 104.1px;
+    left: 28.65px;
+    top: 43.3px;
+
+}
+/* .bold-lets-talk-container{
+
+} */
+.bold-lets-talk-container img{
+    position: absolute;
+    width: 429.86px;
+    height: 126.1px;
+    left: 10.65px;
+    top: 7.3px;
+}
+
+.light-lets-talk-container img {
+    position: absolute;
+    width: 429.86px;
+    height: 126.1px;
+    left: -1.35px;
+    top: -17.7px;
+}
+/* .light-lets-talk-container{
+
+} */
+.lefthand img{
+  position: absolute;
+    width: 303.1px;
+    height: 232.21px;
+    left: -152px;
+    top: 309.87px;
+    /* background: url(Untitled-3.png); */
+    transform: rotate(-17.02deg);
+}
+.righthand img{
+    position: absolute;
+    width: 232.1px;
+    height: 263.21px;
+    left: 219px;
+    top: 92.87px;
+    transform: rotate(-0.49deg);
+}
+/* ============================================================================================================ */
+.form-container{
+    position: absolute;
+    width: 441px;
+    height: 398px;
+    left: 485px;
+    top: 65px;
+    background: #FFFFFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: #f3343a;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #f3343a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #0089ED;;
+  }
+  
+  .container1 {
+    border-radius:20px;
+    background-color: #f2f5f6;
+    padding: 20px;
+  }
+  
+  @media screen and (min-width:770px) and (max-width:1024px) {
+      .small-container{
+        position: relative;
+        width: 928px;
+        height: 486px;
+        top: 8px;
+      }
+      .container{
+          height: 116vh;
+      }
+      .form-container{
+        left: 464px;
+        top: 35px;
+      }
+      body{
+          height: 116vh;
+      }
+  }
+
+  @media screen and (min-width:450px) and (max-width:769px) {
+      .small-container{
+          width: 720px;
+      }
+      .form-container{
+          width: 390px;
+          left: 295px;
+      }
+      .righthand , .lefthand{
+          display: none;
+      }
+      .small-container img{
+        width: 230px;
+        height: 326px;
+        left: -20px;
+        top: 125px;
+      }
+      .light-lets-talk-container img{
+        /* position: absolute; */
+        width: 283.86px;
+        height: 98.1px;
+        left: -19.35px;
+        top: 5.3px;
+      }
+      .bold-lets-talk-container img{
+        /* position: absolute; */
+        width: 283.86px;
+        height: 98.1px;
+        left: -19.35px;
+        top: 7.3px;
+      }
+      .yellow-ellipse{
+        left: 26px;
+        top: 250px;
+      }
+  }
+
+  @media screen and (min-width:300px) and (max-width:320px) {
+      .form-container{
+        left: 19px;
+        top: 37px;
+        width: 95%;
+        font-size: 45px;
+      }
+      .lefthand , .righthand{
+          display: none;
+      }
+      .container{
+        width: 342%;
+        /* height: 500px;
+        top: 37%; */
+        height: 342vh;
+      }
+      .small-container{
+        width: 80%;
+        height: 28%;
+        top: 30%;
+      }
+      .bold-lets-talk-container img{
+          display: unset;
+          top: 9.3vh;
+          left: -34%;
+          width: 500px;
+          height: 182px;
+      }
+      .light-lets-talk-container img{
+        display: unset;
+        top: 54.3px;
+        width: 500px;
+        left: -34%;
+        height: 174px;
+      }
+      .lets-talk-container{
+          display: unset;
+          top: -12.7vh;
+          left: 26%;
+      }
+      input[type=email],input[type=submit] , select, textarea , input[type=text]{
+          font-size: 35px;
+      }
+      .left{
+        position: relative;
+        top: -75%;
+      }
+      .small-container .liberty{
+        width: 330px;
+        height: 450px;
+      }
+      .yellow-ellipse{
+          left: 182px;
+          top: 240px;
+      }
+  }
+
+  @media screen and (min-width:350px) and (max-width:450px) {
+      .container , .form-container , .small-container{
+          position: unset;
+      }
+      .container{
+          width: 208%;
+          height: 208vh;
+      }
+      .form-container{
+        border-radius: 20px;
+        width: 95%;
+        top: 9%;
+        position: relative;
+        left: 13px;
+        font-size: 33px;
+      }
+      .small-container{
+          width: 85%;
+      }
+      .lefthand , .righthand{
+          display: none;
+      }
+      .bold-lets-talk-container img{
+        left: 0.65px;
+        top: -29.7px;
+      }
+      .light-lets-talk-container img{
+          top: -30.7px;
+      }
+      input[type=email],input[type=submit] , select, textarea , input[type=text]{
+        font-size: 30px;
+    }
+  }
+
+  @media screen and (min-width:500px) and (max-width:770px){
+    .container{
+      width: 110%;
+      height: 105vh;
+    }
+  }

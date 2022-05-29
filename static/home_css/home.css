@@ -1,0 +1,108 @@
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    /* font-weight: bold; */
+    /* font-size: 20px; */
+}
+
+.home-image-container{
+    position: relative;
+    /* background-color: orchid; */
+    width: 690px;
+    height: 516px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+.home-content{
+    position: absolute;
+    /* background-color: palegreen; */
+    width:592px;
+    height: 96px;
+    top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.welcome{
+        /* height: 100%; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    color: #8D8D8D;
+    font-weight: 600;
+}
+.back{
+    font-family: 'Poppins', sans-serif;
+        font-size: 70px;
+        font-weight: 600;
+        color: #0089ED;
+}
+.home-imege-content{
+    /* background-color: peru; */
+    width: 502px;
+    height: 328px;
+    position: absolute;
+    top: 175px;
+}
+.home-imege-content img{
+    position:absolute;
+    top: -192px;
+    left: 0px;
+}
+
+@media screen and (max-width:320px){
+    body{
+        background-color: none;
+        width: 87vw;
+    }
+    .home-imege-content img{
+    width: 100%;
+    left: 13%;
+    padding: 66px;
+    }
+    .welcome, .back{
+        font-size: 50px;
+    }
+    .home-content{
+        left: 10%;
+        top: 15%;
+        width: 405px;
+    }
+}
+
+@media screen and (min-width:350px) and (max-width:450px){
+    .home-imege-content img{
+        width: 90%;
+        left: 11%;
+        top: -52%;
+    }
+    .welcome , .back{
+        font-size: 40px;
+    }
+    .home-content{
+        width: 316px;
+        left: 15%;
+    }
+    .leftnavbar{
+        width: 114%;
+    /* padding: -17.9em; */
+    /* position: fixed; */
+    /* flex-direction: row; */
+    /* height: 2.75em; */
+    left: -7%
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:770px){
+    .home-imege-content img{
+        top: -200px;
+        left: 7%;
+        width: 430px;
+    }
+    .home-content{
+        width: 580px;
+    }
+   
+}

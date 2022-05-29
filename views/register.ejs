@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="../static/style1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
+  <title>Register</title>
+</head>
+
+<body>
+  <div class="signup">
+    ]
+  </div>
+  </div>
+
+
+
+
+  <div class="main-container">
+    <div class="up">
+      <div class="up-content-box">
+        <div class="up-content-heading">
+          <div class="a">
+            <P>Sign in to</P>
+          </div>
+          <div class="b">
+            <p>Attendence Application</p>
+          </div>
+
+        </div>
+        <div class="up-content-below-heading">
+          <div class="c">
+            <p>FaceID is a face recognition attendance system that uses Google Calendar to schedule
+              events.<br>The face recognition part makes use of face-api.js</p>
+          </div>
+        </div>
+        <div class="image-box">
+          <div class="image"></div>
+        </div>
+      </div>
+      <!-- <div class="logo-box"> -->
+      <div class="logo"></div>
+      <!-- </div> -->
+    </div>
+    <div class="container">
+      <div class="form">
+        <div class="top-sign">
+          <div class="left-top">
+            <div class="up-top">
+              <p>Welcome <p1>Here !!</p1>
+              </p>
+            </div>
+            <div class="down-top">sign in </div>
+          </div>
+
+        </div>
+        <form class="register" action="/register" method="POST">
+          <div>
+            <label class="letters" for="email">Enter your email</label>
+            <input class="in-put" type="email" id="reg_email" placeholder="email address" name="email" required>
+          </div>
+          <div>
+            <label class="letters" for="name">Enter your name</label>
+            <input class="in-put" type="text" id="name" placeholder="name" name="name" required>
+          </div>
+          <div>
+            <label class="letters" for="password">Enter your Password</label>
+            <input class="in-put" type="password" id="reg_password" placeholder="password" name="password" required>
+          </div>
+
+
+          <p class="optionb">Existing Member?<a href="#">Login</a></p>
+
+          <button type="submit" name="btn" value="signup">Register</button>
+        </form>
+
+
+        <form class="login" action="/login" method="POST">
+          <% if (locals.login_errors) { login_errors.forEach(function(error_msg){ %>
+          <%= error_msg %>
+          <% }); } %>
+
+          <% if (locals.register_error) { register_error.forEach(function(error_msg){ %>
+          <div>
+            <%= error_msg %>
+          </div>
+          <% }); } %>
+          <div>
+            <label class="letters" for="email">Enter your email</label>
+            <input class="in-put" type="email" placeholder="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label class="letters" for="password">Enter your Password</label>
+            <input class="in-put" type="password" id="password" placeholder="password" name="password" required>
+          </div>
+          <p class="optionb"> Not an existing user? <a href="#">Register</a></p>
+
+          <button type="submit" name="btn" value="signin">Login</button>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="down"> -->
+    <div class="down-content">
+      <div class="login-as">
+        <p>Login as</p>
+      </div>
+
+      <div class="pre-login-box">
+        <div class="one">
+          <div class="cross"></div>
+          <div class="circle"></div>
+          <div class="login-as-image"></div>
+          <div class="login-as-heading">
+            <div class="login-as-name">
+              <p>John Peter</p>
+            </div>
+            <div class="login-as-last-seen">
+              <p>Active 1 days ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="one">
+          <div class="cross-2"></div>
+          <div class="circle-2"></div>
+          <div class="login-as-image-2"></div>
+          <div class="login-as-heading-2">
+            <div class="login-as-name-2">
+              <p>Alina Shmen</p>
+            </div>
+            <div class="login-as-last-seen-2">
+              <p>Active 4 days ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+
+  <script src="../public/javascript/vanilla-tilt.js"></script>
+  <script>
+      VanillaTilt.init(document.querySelectorAll(".container"), {
+          max: 25,
+          speed: 400,
+          glare: true,
+          "max-glare": 1,
+      });
+  </script>
+
+ <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+  </script> 
+
+  <script>
+    $('.optionb a').click(function () {
+      $('form').animate({
+        width: ['toggle', 'swing'],
+        height: ['toggle', 'swing'],
+        opacity: "toggle"
+      }, "slow");
+    });
+  </script>
+</body>
+
+</html>

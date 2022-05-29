@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../static//contact-us.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="small-container">
+            <div class="left">
+                <div class="yellow-ellipse"></div>
+                <!-- <div class="white-circle1"></div> -->
+                <img class="liberty" src="../static/img/abc.png" alt="">
+                <div class="lets-talk-container">
+                    <div class="bold-lets-talk-container">
+                        <img src="../static/img/Group 7.png" alt="">
+                    </div>
+
+                    <div class="light-lets-talk-container">
+                        <img src="../static/img/Group 10.png" alt="">
+                    </div>
+                </div>
+                <div class="lefthand">
+                    <img src="../static/img/left-hand.png" alt="">
+                </div>
+                <div class="righthand">
+                    <img src="../static/img/right-hand.png" alt="">
+                </div>
+            </div>
+            <div class="form-container" style="border-radius: 20px;">
+                <div class="container1">
+                    <form action="/contact-us" method="POST" style="margin-top: 7px;">
+                        <label for="name" style="font-weight: bold;"> Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name..">
+
+                        <label for="email" style="font-weight: bold;">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email..">
+
+                        <label for="message" style="font-weight: bold;">Message</label>
+                        <textarea id="message" name="message" placeholder="Write something.."
+                            style="height:100px"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

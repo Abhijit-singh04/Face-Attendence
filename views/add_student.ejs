@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
+  <title>Add Student</title>
+</head>
+
+<body>
+  <!-- <div class="signup">
+    <div class="form"> -->
+      <form class="register" action="/add_student" method="POST">
+        <label>MISIS</label>
+          <input type="number" placeholder="Enter your id" name="MISIS" required>
+        <div>
+          <label for="fname">First Name</label>
+          <input type="text" id="student_firstName" name="student_firstName" required>
+        </div>
+        <div>
+            <label for="lname">Last Name</label>
+            <input type="text" id="student_lastName" name="student_lastName" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="reg_email" name="student_email" required>
+          </div>
+        <!-- <div>
+          <label for="password">Password</label>
+          <input type="password" id="reg_password" name="password" required>
+        </div> -->
+        <button type="submit"  value="signup">ADD STUDENT</button>
+        <!-- <p class="optionb">Existing Member?<a href="#">Login</a></p> -->
+
+
+      </form>
+
+
+
+      <form class="login" action="/login" method="POST">
+        <% if (locals.login_errors) { login_errors.forEach(function(error_msg){ %>
+          <%= error_msg %>
+            <% }); } %>
+
+              <% if (locals.register_error) { register_error.forEach(function(error_msg){ %>
+                <div>
+                  <%= error_msg %>
+                </div>
+                <% }); } %>
+                  <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                  <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                  </div>
+                  <button type="submit" name="btn" value="signin">Login</button>
+                  <p class="optionb"> Not an existing user? <a href="#">Register</a></p>
+      </form>
+
+   
+
+
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+  </script>
+
+  <script>
+    $('.optionb a').click(function () {
+      $('form').animate({
+        width: ['toggle', 'swing'],
+        height: ['toggle', 'swing'],
+        opacity: "toggle"
+      }, "slow");
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+:root {
+    /* Reference colors */
+    --blue-pantone: #3326ae;
+    --red-ryb: #FF392Bff;
+    --ghost-white: #F7F8FFff;
+    --space-cadet: #2B2B4Cff;
+    --amber: #FFC005ff;
+    /* Custom colors*/
+    --white: #fff;
+    --white-transparent: #ffffff66;
+    --space-cadet-transparent: #2B2B4Cbb;
+    --placeholder: #cbcde4;
+    --ghost-white-text: #c3c6deff;
+    /* Tweet buttons */
+    --video: #0089ED;
+    --duration: #00c3f8;
+    --likes: var(--red-ryb);
+
+
+    --background-color:#0089ED;
+    /* --accent-color: #D0D066; */
+    --text-color: black;
+}

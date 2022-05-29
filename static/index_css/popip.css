@@ -1,0 +1,79 @@
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 210px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    top: 53px;
+    z-index: 1;
+    /* bottom: -746%; */
+    left: 175%;
+    margin-left: -209px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    transform: rotate(180deg);
+    top: -36%;
+    left: 39%;
+    margin-left: 90px;
+    border-width: 14px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.icofont-alarm p {
+  position: absolute;
+  top: -61px;
+  left: 4px;
+  width: 29px;
+  height: 29px;
+  /* border-radius: 50%; */
+  color: red;
+  font-size: 83px;
+}
+
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  .google-btn{
+    font-size: 12px;
+    margin-top: 3px;
+   
+  }
+  .google-btn button{
+    border: none;
+    color: white;
+    padding: 6px;
+    font-weight: 800;
+    background-color: blue;
+    border-radius: 7px;
+  }

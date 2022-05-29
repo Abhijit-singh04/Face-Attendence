@@ -1,0 +1,359 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  }
+
+
+.up{ 
+position: absolute;
+width: 100vw;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: #0089ED;
+}
+.up-content-box{
+position: absolute;
+/* background-color: red; */
+width: 396px;
+height: 220px;
+left: 73px;
+top: 88px;
+
+}
+.a{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+  color: #FFFFFF;
+}
+.b{
+  font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 400; */
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+.c{
+  font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 300; */
+font-size: 13px;
+line-height: 20px;
+
+color: #FFFFFF;
+
+}
+.up-content-heading{
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 364px;
+  height: 70px;
+  left: 16px;
+  top: 12px;
+}
+.up-content-below-heading{
+  /* background-color: green; */
+  position: absolute;
+  width: 364px;
+  height: 80px;
+  left: 16px;
+  top: 118px;
+
+font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 300; */
+font-size: 13px;
+line-height: 20px;
+
+color: #FFFFFF;
+}
+.image-box{
+  /* background-color: grey; */
+  position: absolute;
+  width: 368px;
+  height: 350px;
+  left: 332px;
+  top: -97px;
+}
+.image{
+  position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: url('./img/Saly-1.png');
+}
+
+.logo-box{
+  background-color: khaki;
+  position: absolute;
+  width: 173px;
+  height: 40px;
+  left: 23px;
+  top: 18px;
+}
+.logo{
+  position: absolute;
+  /* width: 173px;
+  height: 40px;
+  left: 23px;
+  top: 18px; */
+  
+  background: url('./img/logo1.png');
+}
+.down{
+  /* background-color: rosybrown; */
+  width: 100vw;
+  height: auto;
+
+}
+.down-content{
+/* background-color: sienna; */
+position: absolute;
+width: 639px;
+    height: 231px;
+left: 91px;
+top: 422px;
+}
+.login-as{
+  /* background-color: green; */
+  position: absolute;
+width: 66px;
+height: 24px;
+left: 0;
+top: 0;
+
+font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 400; */
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.cross{
+  /* background-color:royalblue; */
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  left: 128px;
+  top: 14px;
+  background: url('./img/circle.png');
+  background-repeat: no-repeat;
+}
+.circle{
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  left: 132px;
+    top: 18px;
+  background: url('./img/Vector.png');
+  background-repeat: no-repeat;
+}
+.pre-login-box{
+  /* background-color: rgb(110, 229, 245); */
+  position: absolute;
+  display: flex;
+    justify-content: space-between ;
+    /* row-gap: 6px; */
+    
+    flex-wrap: wrap;
+  flex-direction: row;
+  width: 323px;
+  height: 187px;
+  left: 0px;
+  top: 40px;
+}
+.one{
+  /* background-color: lightgreen; */
+  /* position: absolute; */
+
+  width: 152px;
+    height: 177px;
+  left: 0px;
+  top: 0px;
+  background: #EFF8FF;
+border-radius: 9px;
+}
+
+
+
+.login-as-image{
+  
+position: absolute;
+width: 76px;
+height: 76px;
+left: 37px;
+top:37px;
+background: url('./img/Ellipse\ 3.png');
+}
+.login-as-heading{
+  /* background-color: mediumpurple; */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 140px;
+  height: 57px;
+  left: 4px;
+  top: 116px;
+}
+.login-as-name{
+  /* position: absolute; */
+  width: 81px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* left: 0; */
+  /* top: 0; */
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  /* font-weight: 500; */
+  font-size: 15px;
+  line-height: 22px;
+}
+.login-as-last-seen{
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  /* font-weight: 300; */
+  font-size: 13px;
+  line-height: 20px;
+  /* identical to box height */
+  
+  
+  color: #ADADAD;
+  
+}
+.cross-2{
+  /* background-color:royalblue; */
+  position:absolute;
+  width: 76px;
+  height: 76px;
+  left: 301px;
+  top: 14px;
+  background: url('./img/circle.png');
+  background-repeat: no-repeat;
+}
+.circle-2{
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  left: 305px;
+    top: 18px;
+  background: url('./img/Vector.png');
+  background-repeat: no-repeat;
+}
+.login-as-image-2{
+  
+  position: relative;
+  width: 76px;
+  height: 76px;
+  left: 37px;
+  top:37px;
+  background: url('./img/Ellipse\ 4.png');
+  }
+  .login-as-heading-2{
+    /* background-color: mediumpurple; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 140px;
+    height: 57px;
+    left: 178px;
+    top: 116px;
+  }
+  .login-as-name-2{
+    /* position: absolute; */
+    width: 110px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* left: 0; */
+    /* top: 0; */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    /* font-weight: 500; */
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .login-as-last-seen-2{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    /* font-weight: 300; */
+    font-size: 13px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #ADADAD;
+    
+  }
+  /* =============================card */
+  /* .ccontainer{ */
+   /* position: relative; */
+    /* width: 200px; */
+    /* height: 400px; */
+    /* margin: 30px; */
+    
+  
+    
+    /* transparent colour */
+    /* overflow: hidden; */
+    /* The backdrop-filter CSS property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything behind the element, to see the effect you must make the element or its background at least partially transparent. */
+    /* overflow: --> Shorthand for setting 'overflow-x' and 'overflow-y'. */
+    /*hiden :  Represents the value specified as the property’s initial value. */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+   
+    /* The backdrop-filter CSS property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything behind the element, to see the effect you must make the element or its background at least partially transparent. */
+  /* } */
+  .container{
+    background-color: indianred;
+  position: absolute;
+  width: 440px;
+      height: 515px;
+      left: 910px;
+      top: 77px;
+      background: rgba(255, 255,255, 0.1);
+      box-shadow: 20px 20px 50px rgb(0, 0,0,0.5);
+      border-radius: 15px;
+      border-top: 1px solid rgba(255, 255,255, 0.5) ;
+      border-left: 1px solid rgba(255, 255,255, 0.5) ;
+      backdrop-filter:blur(5px) ;
+      
+  }

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <title>Sessions</title>
+    <link rel="stylesheet" href="../static/index_css/reset.css">
+    <link rel="stylesheet" href="../static/index_css/vendor/icofont/icofont.min.css">
+    <link rel="stylesheet" href="../static/index_css/colors.css">
+
+    <link rel="stylesheet" href="../static/index_css/body.css">
+    <link rel="stylesheet" href="../static/index_css/leftNavbar.css">
+    <link rel="stylesheet" href="../static/index_css/header.css">
+    <link rel="stylesheet" href="../static/index_css/main.css">
+    <link rel="stylesheet" href="../static/session_CSS/session.css">
+    <link rel="stylesheet" href="../static/index_css//popip.css">
+    <!-- <link rel="stylesheet" href="../static/view_student_CSS/table.css"> -->
+</head>
+
+<body>
+    <nav class="leftNavbar">
+        <a href="#" class="leftNavbar-logo"><i class="icofont-brand-microsoft"></i></i><span>Engage</span></a>
+        <ul class="leftNavbar-nav">
+            <li>
+                <a href="/"><i class="icofont-home"></i><span>Home</span></a>
+            </li>
+            <li>
+                <a href="googleLogin"><i class="icofont-ui-calendar"></i><span>Calender</span></a>
+            </li>
+            <li>
+                <a href="viewStudents"><i class="icofont-group-students"></i><span>student details</span></a>
+            </li>
+            <li class="active">
+                <a href="session"><i class="icofont-search-user"></i><span>Sessions</span></a>
+            </li>
+            <li>
+                <a href="add_lecturer"><i class="icofont-user-alt-5"></i><span>Add student</span></a>
+            </li>
+            <li>
+                <a href="attendance"><i class="icofont-tick-boxed"></i><span>Attendence</span></a>
+            </li>
+        </ul>
+        <a href="#" id="navbar-width-incrementing" class="leftNavbar-footer"><i
+                class="icofont-rounded-double-right"></i></a>
+    </nav>
+
+    <main>
+        <div class="left-radius"></div>
+        <header>
+            <section role="search">
+                <form action="#" method="get">
+                    <div class="form-inline">
+                        <i class="icofont-search"></i>
+                        <input type="search" placeholder="Search">
+                    </div>
+                </form>
+            </section>
+            <section role="application">
+                <nav class="heading-navbar">
+                    <!-- <a href="#">Feedback</a> -->
+                    <a href="/contact-us">Contacts</a>
+                    <a href="#">Help</a>
+                </nav>
+                <div class="notification-profile">
+                    
+                    <!-- <a class="popup" class="notification" onclick="myFunction()"><i class="icofont-alarm"><p>.</p></i>
+                        <span class="popuptext" id="myPopup"><br></span>
+                    </a> -->
+                    <a href="#" class="notification"><i class="icofont-alarm"></i></a>
+                    <a>
+                        <!-- <div class="profile-pic"></div> -->
+                        <i class="icofont-user-suited"></i>
+                    </a>
+                    <a href="logout" class="logout"><i class="icofont-logout"></i></i></a>
+                </div>
+            </section>
+        </header>
+        </div>
+        <div class="wrapper">
+            <div class="signup">
+                <div class="signup-form">
+                    <form method="POST">
+
+                        <script>
+                            $(document).ready(function () {
+                                $('#selectGroup').change(function () {
+
+                                    var selectGroup = $('#selectGroup').val();
+
+                                    $.ajax({
+                                        type: 'GET',
+                                        data: {
+                                            selectGroup: selectGroup
+                                        },
+                                        url: '/getTime',
+                                        success: function (data) {
+                                            console.log(data);
+                                            $('#startTime').empty();
+                                            $('#endTime').empty();
+                                            $.each(data, function (index, TimeValue) {
+                                                $('#startTime').val(TimeValue
+                                                    .event_startTime);
+                                                $('#endTime').val(TimeValue
+                                                    .event_endTime);
+
+                                            });
+                                        }
+                                    });
+                                });
+                            })
+                        </script>
+
+                        <div class="group-label-box">
+                            <div class="group-label"> <label for="group"> Student   <span>Group</span> </label> <br></div>
+                            <div>
+                                <select name="selectGroup" id="selectGroup">
+                                    <option>
+                                        Select Group
+                                    </option>
+                                    <% for (var i = 0; i < listResults.length; i++){ %>
+                                    <option>
+                                        <%= listResults[i].event_name %>
+                                    </option>
+                                    <% } %>
+
+
+
+                                </select>
+                            </div>
+
+                            <br>
+                        </div>
+                        <br>
+
+
+
+                        <div class="abhijit-timer">
+                        <div class="starting-time">
+                            <div> <label for="startTime">Start Time: </label></div>
+                            <div> <input type="text" value="" id="startTime" name="startTime" readonly required></div>
+                        </div>
+                        <div class="ending-time">
+                            <div> <label for="endTime">End Time: </label></div>
+                            <div><input type="text" value="" id="endTime" name="endTime" readonly required></div>
+                        </div>
+                        </div>
+
+
+
+                        <!-- <div class="start-session-button">
+                            <button type="submit" formaction="/check_in_recognition">Start Session</button>
+                           <span><a href="/check_in_recognition"></a></span> -->
+                        <!-- </div>  -->
+                        <button type="submit" class="session-stop" formaction="/check_in_recognition">Start Session</button>
+                        <!-- <button type="submit" class="session-stop" formaction="/check_out_recognition">Stop Session</button> -->
+
+                        <!-- <button onclick="sendGroup()" type="submit">Start Class</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="mainRadiusBottom"></div> -->
+    </main>
+
+
+
+
+
+
+
+</body>
+<script src="../public/javascript/popup.js"></script>
+<script src="../public/index_javascript/leftNavbar.js"></script>
+</html>

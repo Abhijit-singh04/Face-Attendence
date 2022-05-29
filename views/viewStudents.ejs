@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/index_css/reset.css">
+    <link rel="stylesheet" href="../static/index_css/vendor/icofont/icofont.min.css">
+    <link rel="stylesheet" href="../static/index_css/colors.css">
+
+    <link rel="stylesheet" href="../static/index_css/body.css">
+    <link rel="stylesheet" href="../static/index_css/leftNavbar.css">
+    <link rel="stylesheet" href="../static/index_css/header.css">
+    <link rel="stylesheet" href="../static/index_css/main.css">
+    <link rel="stylesheet" href="../static/view_student_CSS/table.css">
+    <link rel="stylesheet" href="../static/index_css//popip.css">
+    <title>Students</title>
+</head>
+
+<body>
+
+    <nav class="leftNavbar">
+        <a href="#" class="leftNavbar-logo"><i class="icofont-brand-microsoft"></i></i><span>Engage</span></a>
+        <ul class="leftNavbar-nav">
+            <li>
+                <a href="/"><i class="icofont-home"></i><span>Home</span></a>
+            </li>
+            <li>
+                <a href="googleLogin"><i class="icofont-ui-calendar"></i><span>Calender</span></a>
+            </li>
+            <li class="active">
+                <a href="viewStudents"><i class="icofont-group-students"></i><span>student details</span></a>
+            </li>
+            <li>
+                <a href="session"><i class="icofont-search-user"></i><span>Sessions</span></a>
+            </li>
+            <li>
+                <a href="add_lecturer"><i class="icofont-user-alt-5"></i><span>Add student</span></a>
+            </li>
+            <li>
+                <a href="attendance"><i class="icofont-tick-boxed"></i><span>Attendence</span></a>
+            </li>
+        </ul>
+        <a href="#" id="navbar-width-incrementing" class="leftNavbar-footer"><i
+                class="icofont-rounded-double-right"></i></a>
+    </nav>
+
+    <main>
+        <div class="left-radius"></div>
+        <header>
+            <section role="search">
+                <form action="#" method="get">
+                    <div class="form-inline">
+                        <i class="icofont-search"></i>
+                        <input type="search" placeholder="Search">
+                    </div>
+                </form>
+            </section>
+            <section role="application">
+                <nav class="heading-navbar">
+                    <!-- <a href="#">Feedback</a> -->
+                    <a href="/contact-us">Contacts</a>
+                    <a href="#">Help</a>
+                </nav>
+                <div class="google-btn">
+                    <a href="googleLogin"><button>Login <span>with Google</span></button></a>
+               </div>
+                <div class="notification-profile">
+                    <a class="popup" class="notification" onclick="myFunction()"><i class="icofont-alarm"><p>.</p></i>
+                        <span class="popuptext" id="myPopup"><br> Check Student's group list here <br></span>
+                    </a>
+                    <!-- <a href="#" class="notification"><i class="icofont-alarm"></i></a> -->
+                    <!-- <a> -->
+                    <div >
+                        <i class="icofont-user-suited"></i>
+                    </div>
+                    
+                    <!-- </a> -->
+                    <a href="logout" class="logout"><i class="icofont-logout"></i></i></a>
+                </div>
+            </section>
+        </header>
+
+
+        <div class="wrapper">
+            <div class="signup">
+                <div class="signup-form">
+                    <form method="POST">
+
+                        <script>
+                            $(document).ready(function () {
+                                $('#selectGroup').change(function () {
+
+                                    var selectGroup = $('#selectGroup').val();
+
+                                    $.ajax({
+                                        type: 'GET',
+                                        data: {
+                                            selectGroup: selectGroup
+                                        },
+                                        url: '/getStudents',
+                                        success: function (data) {
+                                            $('#stdTable').empty();
+                                            $('#stdTable').append(
+                                                '<thead><tr><td>MISIS</td><td>First Name</td><td>Last Name</td><td>Email</td></tr></thead>'
+                                            )
+                                            for (i = 0; i < data.length; i++) {
+                                                var row = data[i];
+                                                $('#stdTable').append('  <tbody><tr><td>' +
+                                                    row.MISIS + '</td><td>' + row
+                                                    .student_firstName + '</td><td>' +
+                                                    row.student_lastName + '</td><td>' +
+                                                    row.student_email +
+                                                    '</td></tr></tbody>')
+                                            }
+                                        }
+                                    });
+                                });
+                            })
+                        </script>
+
+                        <div>
+                            <label for="group" class="group-label"> Student <span>Group</span> </label> <br>
+
+                            <select name="selectGroup" id="selectGroup">
+                                <option>
+                                    Select Group
+                                </option>
+                                <% for (var i = 0; i < listResults.length; i++){ %>
+                                <option>
+                                    <%= listResults[i].module_name %>
+                                </option>
+                                <% } %>
+
+
+
+                            </select>
+                            <br>
+                        </div>
+                        <div class="table-container">
+                            <table class="styled-table" id="stdTable">
+                            </table>
+                        </div>
+
+                </div>
+
+
+
+
+                <script src="../public/index_javascript/leftNavbar.js"></script>
+                <script src="../public/javascript/popup.js"></script>
+</body>
+
+</html>

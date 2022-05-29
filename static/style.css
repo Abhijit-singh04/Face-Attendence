@@ -1,0 +1,403 @@
+/* body {background-color: #c7b5e7;
+} */
+
+#leftHalf {
+  background: url(/static/img/logo-home.png);
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  top: 0px;
+}
+#rightHalf {
+  background-color:#6600ff ; 
+  width: 50%;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  top: 0px;
+}
+
+.topnav {
+  background-color: #6600ff;
+  overflow: hidden;
+  float: right;
+  right: 6%;
+  position: relative;
+  z-index: 2;
+  border-style: solid;
+  border-color:black;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 50px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+  
+  .topnav a:hover {
+    background-color: #290066;
+    color: #f2f2f2;
+  }
+  
+  .topnav a.active {
+    background-color: #f2f2f2;
+    color: rgb(0, 0, 0);
+  }
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    border: 2px;
+    border-color: green;
+  }
+  
+  /* Clear floats after image containers */
+  /* .row {
+    content: "";
+    clear: both;
+    display: flex;
+    position: absolute;
+    top:45%;
+    left:20%
+  } */
+
+  /* .name{
+    position: absolute;
+    top:20%;
+    left:20%;
+    font-size: 30px;
+  } */
+  
+  /* .containerba{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+  } */
+
+  /* .signup{
+    width: 360px;
+    padding: 10%;
+    margin: auto;
+    font-size: 30px;
+} */
+
+.form{
+  position: relative;
+  top: 18px;
+  height: 484px;
+  z-index: 1;
+  /* background-color: #0089ed; */
+  max-width: 400px;
+  margin: 0px auto 0px;
+  /* padding: 10px; */
+  /* text-align: center; */
+}
+
+.form input{
+    /* font-family: monospace; */
+    /* outline: 5; */
+    /* background: #ffffff; */
+    width: 100%;
+    /* border:0; */
+    /* margin: 0 0 15px; */
+    padding: 15px;
+    /* box-sizing: 20px; */
+    /* font-size: 20px; */
+    /* text-align: center; */
+}
+
+.form button{
+    /* font-family: monospace; */
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+width: 100%;
+height: 54px;
+left: 827px;
+top: 687px;
+    /* background: #5a2e9b; */
+    
+background: #0089ED;
+box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+border-radius: 10px;
+
+}
+
+/* .form label{
+font-family: monospace;
+} */
+
+
+.optionb{ 
+  
+    padding: 2px;
+    font-size: 18px;
+    color: black;
+    display: flex;
+    justify-content: right;
+    font-family: 'Poppins';
+font-style: normal;
+ }
+ 
+.form .optionb a{
+    color: #4285F4;
+}
+.form button:hover {
+    font-style: oblique;
+    color: white;
+    background: #f15c31; 
+}
+
+.form .register{
+    display: none;
+}
+.form .select {
+  color: black ;
+}
+  
+h2  {
+  top: 30%;
+  font-size: 70px;
+  position: absolute;
+  text-align: center;
+}
+
+td {
+  border: 1px solid #999;
+  padding:10px 10px;
+}
+#stdTable{
+  position: absolute;
+  left: -100%;
+}
+
+/* canvas {
+  position: absolute;
+  align-content: center;
+}
+
+video{
+display: block; 
+margin: auto; 
+} */
+
+
+.letters{
+  /* font-size: 39px; */
+  font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 500; */
+font-size: 21px;
+    line-height: 46px;
+display: flex;
+/* identical to box height */
+
+
+color: #000000;
+}
+.in-put{
+
+background: #FFFFFF;
+border: 1px solid #4285F4;
+border-radius: 9px;
+}
+
+.form input ::placeholder{
+  font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 300; */
+font-size: 14px;
+line-height: 21px;
+display: flex;
+
+color: #808080;
+}
+.top-sign{
+  position: relative;
+  /* background-color: aqua; */
+  width: 100%;
+  height: 112px;
+  display: flex;
+  justify-content: space-between;
+}
+.left-top{
+/* background-color: blueviolet; */
+display: flex;
+flex-direction: column;
+}
+.up-top{
+  font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 400; */
+font-size: 26px;
+    line-height: 40px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.up-top p1{
+  color:#f15c31;
+}
+.down-top{
+  position: relative;
+  font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 500; */
+font-size: 55px;
+line-height: 82px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+/* .right-top{
+background-color: darkgoldenrod;
+display: flex;
+flex-direction: column;
+justify-content: right;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 43px;
+line-height: 20px;
+
+color: #8D8D8D;
+} */
+
+/* =========================responsive============================ */
+@media only screen and (min-width:400px) and (max-width:500px) {
+  .form input{
+    width: 126%;
+    padding: 13px;
+    position: relative;
+    left: -20%;
+  }
+  .letters{
+    position: relative;
+    left: -18%;
+  }
+  .form button{
+    padding:0px;
+    width: 21%;
+    font-size: 18px;
+    height: 40px;
+    margin-top: 5px;
+  }
+  .optionb{
+    font-size: 15px;
+    position: relative;
+    left: 7%;
+  }
+  body .up{
+    width: 181vw;
+  }
+}
+
+@media only screen and (min-width:300px) and (max-width:400px){
+  .form button{
+    padding:0px;
+    /* width: 21%; */
+    font-size: 18px;
+    height: 40px;
+    margin-top: 5px;
+  }
+  .optionb{
+    font-size: 18px;
+    position: relative;
+    left: 7%;
+  }
+  body .up{
+    width:241vw;
+  }
+}
+
+
+/* ============================responsive================== */
+@media only screen and (min-width:500px) and (max-width:780px) {
+  body .container{
+    position: relative;
+    width: 440px;
+    height: 515px;
+    left: 25vh;
+    top: 59vh;
+  }
+.down-content{
+  display: none;
+  }
+}
+
+@media only screen and (min-width:400px) and (max-width:500px) {
+  body{
+    width: 100%;
+  }
+  .down-content{
+    display: none;
+  }
+  body .container{  
+  position: relative;
+  left: 15vw;
+  top: 68vh;
+  width: 152vw;
+  }
+  .top-sign{
+    text-align: center;
+    display:block;
+  }
+  /* .in-put{
+    width: 76%;
+  } */
+  .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .up{
+    width: 181vw;
+  }
+  
+}
+
+@media only screen and (min-width:300px) and (max-width:400px){
+  body{
+    width: 100%;
+  }
+  .down-content{
+    display: none;
+  }
+  body .container{  
+    position: relative;
+    left: 44vw;
+    top: 68vh;
+    width: 152vw;
+  }
+  .up{
+    width: 241vw;
+  }
+  .top-sign{
+    text-align: center;
+    display:block;
+  }
+  
+}
+
+@media screen and (min-width:900px) and (max-width:1024px){
+  .up{
+    width: 132vw;
+  }
+  body .container{
+    position: relative;
+    left: 299px;
+    top: 70vh;
+  }
+  .down-content{
+    display: none;
+  }
+}
+

@@ -1,0 +1,254 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.signup {
+    /* background-color: lawngreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 780px;
+    /* padding: 10%; */
+    margin: auto;
+    font-size: 18px;
+}
+
+.signup-form {
+    /* background-color: lightpink; */
+    position: relative;
+    /* top: 18px; */
+    height: 484px;
+    width: 756px;
+    z-index: 1;
+    /* background-color: #0089ed; */
+    /* max-width: 413px; */
+    margin: 0px auto 0px;
+    /* padding: 10px; */
+   
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+
+.abhijit-timer{
+    display: flex;
+    top: -10px;
+    position: relative;
+    width: 154%;
+}
+
+.signup-form form{
+    /* background-color: seagreen; */
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+.signup-form form select{
+    position: relative;
+    width: 216px;
+    top: 25px;
+}
+
+.group-label-box{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+.group-label {
+    position: relative;
+    /* left: 39px; */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    color: #0089ED;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+}
+
+.group-label span {
+
+    color: orangered;
+}
+
+.starting-time {
+    /* background-color: mediumpurple; */
+    position: relative;
+    top: 63px;
+    width: 431px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starting-time label {
+    /* width: 100px; */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 20px;
+    color: orangered;
+}
+
+.ending-time {
+    /* background-color: mediumpurple; */
+    position: relative;
+    top: 63px;
+    width: 431px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ending-time label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 20px;
+    color: orangered;
+}
+.start-session-button{
+    /* background-color: rosybrown; */
+    position: relative;
+    top: 85px;
+}
+
+
+
+
+/*  */
+
+.start-session-button span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+  .start-session-button span a{
+    font-size: 22px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+ .start-session-button  span a:before,
+ .start-session-button span a:after{
+    position: absolute;
+    content: "BUTTON";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .start-session-button span a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .start-session-button span a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .start-session-button span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+  @media screen and (min-width:500px) and (max-width:770px){
+      .abhijit-timer input{
+          height: 30px;
+      }
+  }
+
+  @media screen and (min-width:350px) and (max-width:450px){
+      .abhijit-timer{
+      flex-direction: column;
+      left: -2%;
+      }
+      .starting-time , .ending-time{
+        left: 33%;
+        top: 57%;
+      }
+      .start-session-button span{
+          left: 50%;
+      }
+      .start-session-button span a{
+          font-size: 20px;
+      }
+      .group-label-box{
+        position: relative;
+        left: 18%;
+        top: 15%;
+      }
+  }
+
+  @media screen and (min-width:300px) and (max-width:350px){
+    .abhijit-timer{
+    flex-direction: column;
+    left: -2%;
+    top: 21%;
+    }
+    .starting-time , .ending-time{
+      left: 33%;
+      top: 57%;
+    }
+    .start-session-button span{
+        left: 50%;
+        top: 130%;
+    }
+    .start-session-button span a{
+        font-size: 20px;
+    }
+    .group-label-box{
+      position: relative;
+      left: 24%;
+      top: 42%;
+    }
+    .ending-time{
+        width: 438px;
+    }
+    .leftNavbar{
+        font-size: 2rem;
+    }
+    .leftNavbar span{
+        font-size: 15px;
+    }
+    .notification-profile{
+        width: 100px;
+        left: 125%;
+        position: relative;
+    }
+    .start-session-button button{
+        position: absolute;
+        width: 40vw;
+        top: 10vh;
+        left: 45px;
+    }
+}
+
+.session-stop{
+    position: absolute;
+    top: 60%;
+}
+  

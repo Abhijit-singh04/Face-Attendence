@@ -1,0 +1,233 @@
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.signup{
+    /* background-color: lawngreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 780px;
+    /* padding: 10%; */
+    margin: auto;
+    font-size: 18px;
+}
+.signup-form-attendence{
+    /* background-color: lightpink; */
+    position: relative;
+    /* top: 18px; */
+    height: 484px;
+    width: 756px;
+    z-index: 1;
+    /* background-color: #0089ed; */
+    /* max-width: 413px; */
+    margin: 0px auto 0px;
+    /* padding: 10px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .group-label{
+    width: 100px;
+    position: relative;
+    top: -65px;
+    font-family: 'Poppins';
+    font-style: normal;
+    /* font-weight: 500; */
+    font-size: 42px;
+    color: #0089ED;
+  }
+  .group-label span{
+      
+    color: orangered;
+  }
+
+  .signup-form-attendence form{
+    /* background-color: olivedrab; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    /* position: relative; */
+    /* top: 12px; */
+    left: 69px;
+    width: 423px;
+    height: 267px;
+  }
+  .signup-form-attendence select{
+    width: 267px;
+    position: relative;
+    top: -52px;
+  }
+  #class_date{
+    width: 208px;
+    position: relative;
+    top: -49px;
+  }
+
+  .signup-form-attendence button{
+    position: relative;
+    top: -21px;
+  }
+    .attendence-table-container{
+     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -279px;
+    width: 721px;
+    height: 380px;
+    /* background-color: aquamarine; */
+
+    }
+  .attendence-table-container table{
+    background-color: rgb(255 57 43 / 31%);
+    position: relative;
+    top: -66px;
+    width: 75%;
+
+  }
+  /* #studentTable{
+    
+      position: absolute;
+      left: 27%;
+      top: 330px;
+  } */
+  .styled-table-attendence {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 24px;
+    font-family: sans-serif;
+    /* min-width: 542px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table-attendence table thead{
+  text-align: center;
+    /* border-radius: 0px 0px 0px 0px; */
+}
+.styled-table-attendence thead tr {
+    background-color: #0089ED;
+     border-radius: 0px 0px 0px 0px;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table-attendence th,
+.styled-table-attendence td {
+    padding: 12px 0px;
+}
+/* 
+.styled-table-attendence tbody tr {
+    border-bottom: 1px solid #dddddd;
+} */
+/* 
+.styled-table-attendence tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table-attendence tbody tr:last-of-type {
+    border-bottom: 2px solid orangered;
+} */
+
+.meranaam select optgroup{
+  position: relative;
+  top: 12px;
+  width: 200px;
+  height: 300px;
+}
+
+@media screen and (min-width:300px) and (max-width:350px){
+  .attendence-table-container{
+    top: -221px;
+    left: 30%;
+    width: 580px;
+    height: 96vh;
+
+  }
+  .signup-form-attendence{
+    left: 23%;
+    top:34px;
+    /* top:10%; */
+  }
+  .group-label{
+    top:-35px ;
+    left: 23%;
+  }
+  #selectGroup{
+    top: -6px;
+    left: 17%;
+  }
+  #class_date{
+    top: -10px;
+    left: 12%;
+  }
+  #getInfoBtn{
+    top: 4px;
+    left: 14%;
+  }
+  .dark-mode-button{
+    display: none;
+  }
+  section[role="search"] {
+    /* position: relative;
+    top: 50px; */
+    font-size: 1rem;
+  }
+  .notification-profile {
+    /* position: relative;
+    top: 50px; */
+    left: 300%;
+  }
+  optgroup{
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width:350px) and (max-width:450px){
+  .attendence-table-container{
+    top: -221px;
+    left: 17%;
+    width: 582px;
+    height: 100vh;
+
+  }
+  .signup-form-attendence{
+    left: 9%;
+    top: 33px;
+  }
+  .group-label{
+    top:-35px ;
+    left: 23%;
+  }
+  #selectGroup{
+    top: -11px;
+    left: 15%;
+  }
+  #class_date{
+    top: -10px;
+    left: 12%;
+  }
+  #getInfoBtn{
+    top: 4px;
+    left: 14%;
+  }
+  .dark-mode-button{
+    display: none;
+  }
+  section[role="search"] {
+    /* position: relative;
+    top: 50px; */
+    font-size: 15px;
+  }
+  .notification-profile {
+    /* position: relative;
+    top: 50px; */
+    left: 105%;
+  }
+  optgroup{
+    font-size: 15px;
+  }
+}
